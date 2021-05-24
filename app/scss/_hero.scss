@@ -1,0 +1,93 @@
+//Hero Section
+.hero{
+    overflow: hidden;
+    height: 672px;
+
+    &-img{
+        position: relative;
+        height: 65%;
+
+        &-bg{
+            height: 100%;
+        }
+
+        &-overlay{
+            position: absolute;
+            top: -35%;
+            left: 0;
+            right: 0;
+            bottom: 14%;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+    }
+
+    &-text{
+        text-align: center;
+        transform: translateY(-45px);
+
+        &-title{
+            font-weight: 300;
+            line-height: 1;
+            font-size: 30px;
+        }
+
+        &-desc {
+            font-size: 14px;
+            margin: 20px 0;
+        }
+    }
+
+    @include breakpoint-up(lg){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 656px;
+        padding-bottom: 126px;
+
+        &-img{
+            order: 2;
+            flex: 3;
+            height: 100%;
+
+            &-bg2{
+                height: 100%;
+                position: relative;
+
+                img{
+                    position: absolute;
+                    left: 13%;
+                    top: -10%;
+                    right: 0;
+                    bottom: 0;
+                    transform: scale(1.4);
+                }
+            }
+
+            &-overlay{
+                top: -18%;
+                left: 25%;
+                bottom: -29%;
+                z-index: 100;
+            }
+        }
+
+        &-text{
+            order: 1;
+            flex: 2;
+            text-align: left;
+            padding-right: 0;
+            transform: translateY(0);
+
+            &-title{
+                font-size: 35px;
+            }
+
+            &-desc{
+                margin: 15px 0;
+            }
+        }
+    }
+
+}
